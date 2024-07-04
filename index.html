@@ -11,11 +11,35 @@
         <title>Encriptador de Texto</title>
     </head>
     <body>
-        <header>
-            <h1>a</h1>
-        </header>
         <main>
-            <aside class="aside">
+            <section class="logo">
+                <h1>a</h1>
+            </section>
+
+            <section class="container">
+                <textarea
+                    name="inputTexto"
+                    id="inputTexto"
+                    autofocus
+                    autocomplete="off"
+                    placeholder="Ingrese el texto aquí"
+                ></textarea>
+                <div class="container_info">
+                    <div class="container_info_parrafo">
+                        <i class="bx bxs-info-circle"></i>
+                        <p>Solo letras minúsculas y sin acentos</p>
+                    </div>
+                    <div class="container__buttons">
+                        <button class="container__buttons__encriptar">
+                            Encriptar
+                        </button>
+                        <button class="container__buttons__desencriptar">
+                            Desencriptar
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="aside">
                 <div class="aside__img__container">
                     <img class="aside_img" src="./assets/Muñeco.png" alt="" />
                 </div>
@@ -26,20 +50,6 @@
                     <p class="aside__info__mensaje">
                         Ingresa el texto que desees encriptar o desencriptar.
                     </p>
-                </div>
-                
-            </aside>
-            <section>
-                <textarea name="inputTexto" id="inputTexto"> </textarea>
-                <div>
-                    <p>
-                        <i class="bx bxs-info-circle"></i> Solo letras
-                        minúsculas y sin acentos
-                    </p>
-                    <div>
-                        <button>Encriptar</button>
-                        <button>Desencriptar</button>
-                    </div>
                 </div>
             </section>
         </main>
