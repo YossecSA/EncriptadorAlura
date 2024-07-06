@@ -1,6 +1,6 @@
-# Proyecto de Encriptación de Texto
+# Proyecto de Encriptación de Texto - Alura
 
-Este proyecto es una herramienta de encriptación de texto que permite a los usuarios encriptar y desencriptar mensajes de manera sencilla y segura. La interfaz es amigable y accesible, utilizando HTML, CSS y JavaScript para la funcionalidad y diseño.
+Este proyecto es un desafío propuesto por Alura, para practicar la lógica de programación. Es una herramienta de encriptación de texto que permite a los usuarios encriptar y desencriptar mensajes de manera sencilla y segura.
 
 ## Demo
 
