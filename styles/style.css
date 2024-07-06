@@ -17,11 +17,20 @@
 
     --color-blue-400: #072b61;
     --color-light-blue-200: #eff1fa;
+
+    --color-email: #0866ff;
+    --color-linkedin: #0a66c2;
+    --color-github: #181717;
+
+    --color-white: #ffffff;
 }
 
 body {
     font-family: var(--font-roboto);
     background-color: var(--background-principal);
+}
+a {
+    text-decoration: none;
 }
 main {
     display: grid;
@@ -82,7 +91,7 @@ button {
 }
 .container__buttons__encriptar {
     background-color: var(--color-blue);
-    color: white;
+    color: var(--color-white);
     transition: all 0.2s ease-in;
 }
 .container__buttons__desencriptar {
@@ -98,12 +107,12 @@ button {
     background-color: var(--color-light-blue-200);
 }
 textarea {
-    width: 100%; /* O un valor fijo como 336px si prefieres */
-    height: 100%; /* Altura fija en píxeles */
+    width: 100%;
+    height: 100%;
     padding: 20px;
     box-sizing: border-box;
     border: none;
-    resize: none; /* Opcional: deshabilita el cambio de tamaño por el usuario */
+    resize: none;
     outline: none;
     background-color: transparent;
 }
@@ -131,7 +140,7 @@ textarea::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb:hover {
     cursor: pointer;
 }
-.textarea_container{
+.textarea_container {
     color: var(--color-blue);
     font-size: 2rem;
 }
@@ -173,14 +182,14 @@ textarea::-webkit-scrollbar-thumb:hover {
     line-height: 150%;
 }
 
-.aside__encriptado{
+.aside__encriptado {
     display: flex;
     height: 100%;
     flex-direction: column;
     padding-bottom: 1rem;
     gap: 1rem;
 }
-.textarea_encriptado{
+.textarea_encriptado {
     color: var(--color-gray-400);
     font-size: 1.5rem;
     width: 100%;
@@ -191,12 +200,79 @@ textarea::-webkit-scrollbar-thumb:hover {
     padding: 0;
 }
 
-.activo{
+.activo {
     display: none;
 }
+
+/*diseño del boton alertas*/
+.alert_button {
+    width: 100% !important;
+    background-color: var(--color-blue) !important;
+    color: var(--color-white) !important;
+    padding: 1rem 2rem;
+    border-radius: 0.75rem !important;
+}
+
+.alert_button:hover {
+    background-color: var(--color-blue-400) !important;
+}
+
+.footer {
+    background-color: var(--color-black-500);
+    color: var(--background-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+.footer__contacto {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+.icon_circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--background-principal);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    transition: background-color 0.3s ease-in, transform 0.3s;
+}
+.icon_circle:hover {
+    transform: scale(1.1);
+}
+.email {
+    color: var(--color-email);
+}
+.linkedin {
+    color: var(--color-linkedin);
+}
+.github {
+    color: var(--color-github);
+}
+
+.email:hover {
+    background-color: var(--color-email);
+    color: var(--color-white);
+}
+
+.linkedin:hover {
+    background-color: var(--color-linkedin);
+    color: var(--color-white);
+}
+.github:hover {
+    background-color: var(--color-github);
+    color: var(--color-white);
+}
+
 @media (max-width: 1200px) {
     main {
-        grid-template-columns: 1fr; /* Ajusta a dos columnas */
+        grid-template-columns: 1fr;
         row-gap: 2rem;
     }
     .logo {
@@ -205,9 +281,13 @@ textarea::-webkit-scrollbar-thumb:hover {
     }
     .container {
         height: calc(90vh - 80px);
+        padding: 1rem 0;
     }
     .aside__img__container {
         display: none;
+    }
+    .aside__encriptado {
+        height: calc(80vh - 80px);
     }
 }
 
@@ -217,7 +297,7 @@ textarea::-webkit-scrollbar-thumb:hover {
         padding-bottom: 2.5rem;
     }
     .grid-item {
-        margin-bottom: 20px; /* Espaciado entre elementos */
+        margin-bottom: 20px;
     }
     .logo {
         font-size: 2.5rem;
@@ -234,5 +314,8 @@ textarea::-webkit-scrollbar-thumb:hover {
     }
     .container__buttons {
         flex-direction: column;
+    }
+    .textarea_container {
+        font-size: 1.5rem;
     }
 }

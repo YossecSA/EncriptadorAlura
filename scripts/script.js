@@ -22,31 +22,29 @@ const claveEncriptacion = {
 //controlador
 document.addEventListener("DOMContentLoaded", function () {
     btnEncriptar.addEventListener("click", () => {
-        let txtInput = obtenerTextoInput("inputTexto");
+        let txtInput = validarYObtenerTexto("inputTexto");
 
-        if (!txtInput) {
-            alert("Texto vacio");
-            return;
-        }
+        if (txtInput === null) return;
+
         let textoEncriptado = encriptarTexto(txtInput, claveEncriptacion);
 
         asideEncriptado.classList.remove("activo");
         asideInfo.classList.add("activo");
-
+        sweetMensaje('info', 'Texto Encriptado', 'Se encriptó el texto correctamente');
         mostrarTexto(textoEncriptado);
     });
 
     btnDesencriptar.addEventListener("click", () => {
-        let txtInput = obtenerTextoInput("inputTexto");
+        let txtInput = validarYObtenerTexto("inputTexto");
 
-        if (!txtInput) {
-            alert("Texto vacio");
-            return;
-        }
+        if (txtInput === null) return;
+
         let textoDesencriptado = deseencriptarTexto(
             txtInput,
             claveEncriptacion
         );
+        sweetMensaje('info', 'Texto Desencriptado', 'Se desencriptó el texto correctamente');
+
         mostrarTexto(textoDesencriptado);
     });
 
@@ -64,11 +62,6 @@ function mostrarTexto(texto) {
 }
 
 let encriptarTexto = (texto, codigos) => {
-    if (!validarTexto(texto)) {
-        alert("Texto incorrecto");
-        return;
-    }
-
     //logica para encriptar
     const arrayDeCaracteres = texto.split("");
 
@@ -80,11 +73,6 @@ let encriptarTexto = (texto, codigos) => {
 };
 
 let deseencriptarTexto = (texto, codigos) => {
-    if (!validarTexto(texto)) {
-        alert("Texto incorrecto");
-        return;
-    }
-
     let textoDesencriptado = texto;
 
     for (const letra in codigos) {
@@ -101,9 +89,41 @@ function copiarAlPortapapeles(texto) {
     navigator.clipboard
         .writeText(texto)
         .then(function () {
-            alert("Texto copiado al portapapeles");
+            sweetMensaje("success", "Éxito", "Texto copiado al portapapeles");
         })
         .catch(function (error) {
-            alert("Hubo un error al copiar el texto: ", error);
+            sweetMensaje("error", "Error", "Hubo un error al copiar el texto");
         });
+}
+
+function validarYObtenerTexto(idInput) {
+    let txtInput = obtenerTextoInput(idInput);
+
+    if (!txtInput) {
+        sweetMensaje("error", "Error", "El campo no puede estar vacío");
+        return null;
+    }
+
+    if (!validarTexto(txtInput)) {
+        sweetMensaje(
+            "error",
+            "Error de validación",
+            "Solo se permiten letras minúsculas y sin acentos"
+        );
+        return null;
+    }
+
+    return txtInput;
+}
+
+function sweetMensaje(icon, titulo, mensaje) {
+    Swal.fire({
+        icon: icon,
+        title: titulo,
+        text: mensaje,
+        confirmButtonText: "Aceptar",
+        customClass: {
+            confirmButton: "alert_button",
+        },
+    });
 }

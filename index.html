@@ -7,6 +7,10 @@
             href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
             rel="stylesheet"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+        />
         <link rel="stylesheet" href="./styles/style.css" />
         <title>Encriptador de Texto</title>
     </head>
@@ -57,7 +61,7 @@
                     <button id="copiarTexto">Copiar</button>
                 </article>
 
-                <article class="aside__info ">
+                <article class="aside__info">
                     <div class="aside__img__container">
                         <img
                             class="aside_img"
@@ -77,7 +81,21 @@
                 </article>
             </section>
         </main>
-        <footer></footer>
+        <footer class="footer">
+            <div class="footer__contacto">
+                <a href="" class="icon_circle email"
+                    ><i class="bx bxl-google "></i
+                ></a>
+                <a href="" class="icon_circle linkedin"
+                    ><i class="bx bxl-linkedin-square "></i
+                ></a>
+                <a href="" class="icon_circle github"
+                    ><i class="bx bxl-github "></i
+                ></a>
+            </div>
+            <p class="footer__informacion">2024 Desarrollado por Yossec Suarez</p>
+        </footer>
         <script src="./scripts/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </body>
 </html>
