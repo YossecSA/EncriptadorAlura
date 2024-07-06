@@ -23,7 +23,7 @@ Puedes ver el proyecto en acción visitando [este enlace](https://tu-pagina-web.
 
 ## Uso de SweetAlert
 
-SweetAlert es una biblioteca para crear alertas bonitas y fáciles de usar. Se utiliza en este proyecto para mostrar alertas e interacciones con el usuario de manera elegante. Para más información sobre SweetAlert, visita [su sitio web](https://sweetalert.js.org/).
+SweetAlert es una biblioteca para crear alertas bonitas y fáciles de usar. Se utiliza en este proyecto para mostrar alertas e interacciones con el usuario de manera elegante. Para más información sobre SweetAlert, visita [su sitio web](https://sweetalert2.github.io/).
 
 ## Uso de Boxicons
 
