@@ -4,7 +4,7 @@ Este proyecto es un desafío propuesto por Alura, para practicar la lógica de p
 
 ## Demo
 
-Puedes ver el proyecto en acción visitando [este enlace]([https://tu-pagina-web.com](https://yossecsa.github.io/EncriptadorAlura/)).
+Puedes ver el proyecto en acción visitando [este enlace](https://yossecsa.github.io/EncriptadorAlura/).
 
 ## Características
 
