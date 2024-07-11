@@ -7,7 +7,7 @@ const asideEncriptado = document.querySelector(".aside__encriptado");
 const asideInfo = document.querySelector(".aside__info");
 
 //controlador
-const regex = /^[a-zA-ZñÑ\s]*$/;
+const regex = /^[a-zA-ZñÑ\s,]*$/;
 const validarTexto = (texto) => regex.test(texto);
 
 // logica de encriptacion
